@@ -10,7 +10,7 @@
       313
     ],
     "retrieval_hit": true,
-    "answer": "An owlbear has **59 hit points** (7d10 + 21) [page 313].",
+    "answer": "An owlbear has **59 hit points** (7d10 + 21)【page 313】.",
     "agent_steps": [
       "search_rules(query='owlbear hit points')"
     ],
@@ -27,7 +27,7 @@
       358
     ],
     "retrieval_hit": true,
-    "answer": "The owlbear’s speed is **40 feet**, and it can also climb at **40 feet**. [page 313]",
+    "answer": "An owlbear’s movement is **Speed 40 ft., Climb 40 ft.** [page 313].",
     "agent_steps": [
       "search_rules(query='owlbear speed')"
     ],
@@ -61,7 +61,7 @@
       248
     ],
     "retrieval_hit": false,
-    "answer": "A longsword deals **1d8 slashing damage** (and can be used versatile to deal 1d10 slashing damage) [page 91].",
+    "answer": "A longsword deals **1d8 slashing damage** (and can be used **versatile 1d10** when wielded with two hands) [page 91].",
     "agent_steps": [
       "list_tables(keyword='weapon')",
       "read_table(row_contains='Longsword', table_name='Weapons > Weapons (page 91)')"
@@ -79,7 +79,7 @@
       207
     ],
     "retrieval_hit": false,
-    "answer": "The rapier costs **25 gp** [page 91].",
+    "answer": "The rapier costs **25 gp**【page 91】.",
     "agent_steps": [
       "list_tables(keyword='weapon')",
       "read_table(row_contains='Rapier', table_name='Weapons > Weapons (page 91)')"
@@ -97,11 +97,15 @@
       255
     ],
     "retrieval_hit": true,
-    "answer": "A wizard’s Hit Point Die is a d6 per wizard level [page 77].",
+    "answer": "A wizard’s Hit Point Die is **d6 per wizard level**【page 77】.",
     "agent_steps": [
-      "list_tables(keyword='wizard')",
-      "search_rules(query='Wizard hit point die')",
-      "read_table(row_contains='', table_name='Wizard > Core Wizard Traits (page 77)')"
+      "list_tables(keyword='hit die')",
+      "read_table(row_contains='Wizard', table_name='Level Advancement > Fixed Hit Points by Class')",
+      "search_rules(query='Wizard hit die')",
+      "search_rules(query='Wizard hit die d6')",
+      "search_rules(query='\"Wizard\" \"Hit Die\"')",
+      "search_rules(query='Wizard Hit Die d6 class')",
+      "search_rules(query='Core Wizard Traits Hit Die')"
     ],
     "answer_correct": true
   },
@@ -116,10 +120,10 @@
       82
     ],
     "retrieval_hit": false,
-    "answer": "A 5th‑level wizard has **2 third‑level spell slots**【page 77】.",
+    "answer": "A 5th‑level wizard has **2 third‑level spell slots** [page 77].",
     "agent_steps": [
-      "list_tables(keyword='wizard')",
-      "read_table(row_contains='', table_name='Wizard > Wizard Features')"
+      "list_tables(keyword='wizard spell slots')",
+      "read_table(row_contains='', table_name='Wizard > Wizard Features (page 77)')"
     ],
     "answer_correct": true
   },
@@ -134,7 +138,7 @@
       332
     ],
     "retrieval_hit": true,
-    "answer": "The Grappled condition gives you **disadvantage on any attack roll you make against a creature that isn’t the one that grappled you**. [page 182]",
+    "answer": "While you are grappled your speed becomes 0 and you can’t increase it, and **you have disadvantage on attack rolls against any creature other than the one that grappled you**【page 182】.",
     "agent_steps": [
       "search_rules(query='Grappled condition attacks')"
     ],
@@ -151,7 +155,7 @@
       233
     ],
     "retrieval_hit": true,
-    "answer": "Fireball deals **8d6 fire damage** on a failed Dexterity save (half on a success). When you cast it using a spell slot higher than 3rd level, the damage increases by **1d6 for each slot level above 3**【page 131】.",
+    "answer": "Fireball deals 8d6 fire damage on a failed Dexterity saving throw (half damage on a success). When you cast it using a spell slot higher than 3rd level, the damage increases by 1d6 for each slot level above 3 [page 131].",
     "agent_steps": [
       "search_rules(query='Fireball damage')"
     ],
@@ -168,7 +172,7 @@
       186
     ],
     "retrieval_hit": true,
-    "answer": "A Long Rest requires **at least 8 hours** of downtime (you sleep 6 hours and can do up to 2 hours of light activity)【page 185】.",
+    "answer": "A Long Rest requires **at least 8 hours** of downtime, during which you sleep for at least 6 hours and can do no more than 2 hours of light activity such as reading, talking, eating, or standing watch. [page 185]",
     "agent_steps": [
       "search_rules(query='Long Rest takes')"
     ],

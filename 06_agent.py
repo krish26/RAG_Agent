@@ -48,8 +48,8 @@ def search_rules(query: str) -> str:
 
 @tool
 def list_tables(keyword: str) -> str:
-    """List the names of tables whose title or column headers contain a keyword.
-    Use a single word, e.g. "weapon", "armor", "wizard", "spell slots"."""
+    """Find tables by name or column headers, best match first.
+    Use one to three words, e.g. "weapon", "armor", "wizard spell slots"."""
     names = tables.list_tables(keyword)
     if not names:
         return f"No tables found for '{keyword}'. Try a shorter or different word."

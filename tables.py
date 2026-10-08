@@ -64,15 +64,31 @@ def load_tables():
     return tables
 
 
-def list_tables(keyword):
-    """Names of tables whose name or column headers contain the keyword."""
-    keyword = keyword.lower()
-    found = []
+def _compact(text):
+    """Lowercase and drop spaces, pipes and dashes, so a header the PDF broke
+    apart ("S | pell S | lots") still matches "spell slots"."""
+    return re.sub(r"[\s|\-\u2014]+", "", text.lower())
+
+
+def list_tables(keyword, limit=15):
+    """Names of tables matching the keyword, best match first.
+
+    Each word of the keyword is looked up in the table's name and column
+    headers. A table that contains the whole phrase ranks highest, then
+    tables that contain more of the words.
+    """
+    words = [_compact(w) for w in keyword.split() if w.strip()]
+    phrase = _compact(keyword)
+    scored = []
     for name, t in load_tables().items():
-        header_text = " ".join(" ".join(r) for r in t["header"]).lower()
-        if keyword in name.lower() or keyword in header_text:
-            found.append(name)
-    return found
+        haystack = _compact(name + " " + " ".join(" ".join(r) for r in t["header"]))
+        score = (len(words) + 1 if phrase and phrase in haystack else 0)
+        score += sum(1 for w in words if w in haystack)
+        score += 0.5 * sum(1 for w in words if w in _compact(name))  # name beats header
+        if score:
+            scored.append((score, name))
+    scored.sort(key=lambda pair: -pair[0])
+    return [name for _, name in scored[:limit]]
 
 
 def format_rows(header, rows):
