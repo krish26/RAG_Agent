@@ -1,0 +1,7 @@
+pymupdf4llm
+chromadb
+sentence-transformers
+groq
+python-dotenv
+langgraph
+langchain-groq

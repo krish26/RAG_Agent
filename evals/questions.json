@@ -1,0 +1,14 @@
+[
+  {"question": "How many hit points does an owlbear have?", "page": 313, "expect": ["59"]},
+  {"question": "How fast does an owlbear move?", "page": 313, "expect": ["40"]},
+  {"question": "What is the Armor Class of a Goblin Warrior?", "page": 290, "expect": ["15"]},
+  {"question": "How much damage does a longsword do?", "page": 91, "expect": ["1d8"]},
+  {"question": "How much does a rapier cost?", "page": 91, "expect": ["25"]},
+  {"question": "What Hit Point Die does a Wizard use?", "page": 77, "expect": ["d6"]},
+  {"question": "How many 3rd-level spell slots does a level 5 Wizard have?", "page": 77, "expect": ["2"]},
+  {"question": "How does the Grappled condition affect my attacks?", "page": 182, "expect": ["disadvantage"]},
+  {"question": "How much damage does Fireball deal?", "page": 131, "expect": ["8d6"]},
+  {"question": "How long does a Long Rest take?", "page": 185, "expect": ["8 hours|eight hours"]},
+  {"question": "What is the best pizza topping?", "page": null, "expect": ["REFUSE"]},
+  {"question": "Who is Drizzt Do'Urden?", "page": null, "expect": ["REFUSE"]}
+]

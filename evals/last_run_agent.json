@@ -1,0 +1,209 @@
+[
+  {
+    "question": "How many hit points does an owlbear have?",
+    "expected_page": 313,
+    "retrieved_pages": [
+      313,
+      271,
+      352,
+      338,
+      313
+    ],
+    "retrieval_hit": true,
+    "answer": "An owlbear has **59 hit points** (7d10 + 21) [page 313].",
+    "agent_steps": [
+      "search_rules(query='owlbear hit points')"
+    ],
+    "answer_correct": true
+  },
+  {
+    "question": "How fast does an owlbear move?",
+    "expected_page": 313,
+    "retrieved_pages": [
+      313,
+      313,
+      271,
+      352,
+      358
+    ],
+    "retrieval_hit": true,
+    "answer": "The owlbear’s speed is **40 feet**, and it can also climb at **40 feet**. [page 313]",
+    "agent_steps": [
+      "search_rules(query='owlbear speed')"
+    ],
+    "answer_correct": true
+  },
+  {
+    "question": "What is the Armor Class of a Goblin Warrior?",
+    "expected_page": 290,
+    "retrieved_pages": [
+      298,
+      290,
+      272,
+      290,
+      177
+    ],
+    "retrieval_hit": true,
+    "answer": "The Goblin Warrior has an Armor Class of **15**【page 290】.",
+    "agent_steps": [
+      "search_rules(query='Goblin Warrior armor class')"
+    ],
+    "answer_correct": true
+  },
+  {
+    "question": "How much damage does a longsword do?",
+    "expected_page": 91,
+    "retrieved_pages": [
+      299,
+      248,
+      248,
+      250,
+      248
+    ],
+    "retrieval_hit": false,
+    "answer": "A longsword deals **1d8 slashing damage** (and can be used versatile to deal 1d10 slashing damage) [page 91].",
+    "agent_steps": [
+      "list_tables(keyword='weapon')",
+      "read_table(row_contains='Longsword', table_name='Weapons > Weapons (page 91)')"
+    ],
+    "answer_correct": true
+  },
+  {
+    "question": "How much does a rapier cost?",
+    "expected_page": 91,
+    "retrieved_pages": [
+      312,
+      102,
+      152,
+      100,
+      207
+    ],
+    "retrieval_hit": false,
+    "answer": "The rapier costs **25 gp** [page 91].",
+    "agent_steps": [
+      "list_tables(keyword='weapon')",
+      "read_table(row_contains='Rapier', table_name='Weapons > Weapons (page 91)')"
+    ],
+    "answer_correct": true
+  },
+  {
+    "question": "What Hit Point Die does a Wizard use?",
+    "expected_page": 77,
+    "retrieved_pages": [
+      77,
+      183,
+      183,
+      255,
+      255
+    ],
+    "retrieval_hit": true,
+    "answer": "A wizard’s Hit Point Die is a d6 per wizard level [page 77].",
+    "agent_steps": [
+      "list_tables(keyword='wizard')",
+      "search_rules(query='Wizard hit point die')",
+      "read_table(row_contains='', table_name='Wizard > Core Wizard Traits (page 77)')"
+    ],
+    "answer_correct": true
+  },
+  {
+    "question": "How many 3rd-level spell slots does a level 5 Wizard have?",
+    "expected_page": 77,
+    "retrieved_pages": [
+      78,
+      45,
+      104,
+      79,
+      82
+    ],
+    "retrieval_hit": false,
+    "answer": "A 5th‑level wizard has **2 third‑level spell slots**【page 77】.",
+    "agent_steps": [
+      "list_tables(keyword='wizard')",
+      "read_table(row_contains='', table_name='Wizard > Wizard Features')"
+    ],
+    "answer_correct": true
+  },
+  {
+    "question": "How does the Grappled condition affect my attacks?",
+    "expected_page": 182,
+    "retrieved_pages": [
+      182,
+      182,
+      182,
+      87,
+      332
+    ],
+    "retrieval_hit": true,
+    "answer": "The Grappled condition gives you **disadvantage on any attack roll you make against a creature that isn’t the one that grappled you**. [page 182]",
+    "agent_steps": [
+      "search_rules(query='Grappled condition attacks')"
+    ],
+    "answer_correct": true
+  },
+  {
+    "question": "How much damage does Fireball deal?",
+    "expected_page": 131,
+    "retrieved_pages": [
+      122,
+      131,
+      122,
+      16,
+      233
+    ],
+    "retrieval_hit": true,
+    "answer": "Fireball deals **8d6 fire damage** on a failed Dexterity save (half on a success). When you cast it using a spell slot higher than 3rd level, the damage increases by **1d6 for each slot level above 3**【page 131】.",
+    "agent_steps": [
+      "search_rules(query='Fireball damage')"
+    ],
+    "answer_correct": true
+  },
+  {
+    "question": "How long does a Long Rest take?",
+    "expected_page": 185,
+    "retrieved_pages": [
+      185,
+      16,
+      185,
+      192,
+      186
+    ],
+    "retrieval_hit": true,
+    "answer": "A Long Rest requires **at least 8 hours** of downtime (you sleep 6 hours and can do up to 2 hours of light activity)【page 185】.",
+    "agent_steps": [
+      "search_rules(query='Long Rest takes')"
+    ],
+    "answer_correct": true
+  },
+  {
+    "question": "What is the best pizza topping?",
+    "expected_page": null,
+    "retrieved_pages": [
+      102,
+      248,
+      101,
+      265,
+      265
+    ],
+    "retrieval_hit": null,
+    "answer": "I couldn't find that in the SRD.",
+    "agent_steps": [],
+    "answer_correct": true
+  },
+  {
+    "question": "Who is Drizzt Do'Urden?",
+    "expected_page": null,
+    "retrieved_pages": [
+      281,
+      281,
+      297,
+      157,
+      281
+    ],
+    "retrieval_hit": null,
+    "answer": "I couldn't find that in the SRD.",
+    "agent_steps": [
+      "search_rules(query=\"Drizzt Do'Urden\")"
+    ],
+    "answer_correct": true
+  }
+]

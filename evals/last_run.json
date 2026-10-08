@@ -1,0 +1,170 @@
+[
+  {
+    "question": "How many hit points does an owlbear have?",
+    "expected_page": 313,
+    "retrieved_pages": [
+      313,
+      271,
+      352,
+      338,
+      313
+    ],
+    "retrieval_hit": true,
+    "answer": "An owlbear has 59 hit points (59 = 7d10 + 21)【page 313】.",
+    "answer_correct": true
+  },
+  {
+    "question": "How fast does an owlbear move?",
+    "expected_page": 313,
+    "retrieved_pages": [
+      313,
+      313,
+      271,
+      352,
+      358
+    ],
+    "retrieval_hit": true,
+    "answer": "The owlbear’s speed is 40 feet (and it can also climb 40 feet).【page 313】",
+    "answer_correct": true
+  },
+  {
+    "question": "What is the Armor Class of a Goblin Warrior?",
+    "expected_page": 290,
+    "retrieved_pages": [
+      298,
+      290,
+      272,
+      290,
+      177
+    ],
+    "retrieval_hit": true,
+    "answer": "The Goblin Warrior has an Armor Class of **15**【page 290】.",
+    "answer_correct": true
+  },
+  {
+    "question": "How much damage does a longsword do?",
+    "expected_page": 91,
+    "retrieved_pages": [
+      299,
+      248,
+      248,
+      250,
+      248
+    ],
+    "retrieval_hit": false,
+    "answer": "A longsword deals 2d10 + 1 slashing damage (average 12) on a hit. [page 299]",
+    "answer_correct": false
+  },
+  {
+    "question": "How much does a rapier cost?",
+    "expected_page": 91,
+    "retrieved_pages": [
+      312,
+      102,
+      152,
+      100,
+      207
+    ],
+    "retrieval_hit": false,
+    "answer": "I couldn't find that in the SRD.",
+    "answer_correct": false
+  },
+  {
+    "question": "What Hit Point Die does a Wizard use?",
+    "expected_page": 77,
+    "retrieved_pages": [
+      77,
+      183,
+      183,
+      255,
+      255
+    ],
+    "retrieval_hit": true,
+    "answer": "I couldn't find that in the SRD.",
+    "answer_correct": false
+  },
+  {
+    "question": "How many 3rd-level spell slots does a level 5 Wizard have?",
+    "expected_page": 77,
+    "retrieved_pages": [
+      78,
+      45,
+      104,
+      79,
+      82
+    ],
+    "retrieval_hit": false,
+    "answer": "I couldn't find that in the SRD.",
+    "answer_correct": false
+  },
+  {
+    "question": "How does the Grappled condition affect my attacks?",
+    "expected_page": 182,
+    "retrieved_pages": [
+      182,
+      182,
+      182,
+      87,
+      332
+    ],
+    "retrieval_hit": true,
+    "answer": "While you have the Grappled condition you suffer **Disadvantage on attack rolls against any target other than the creature that grappled you**. You can still attack the grappler without that disadvantage. [page 182]",
+    "answer_correct": true
+  },
+  {
+    "question": "How much damage does Fireball deal?",
+    "expected_page": 131,
+    "retrieved_pages": [
+      122,
+      131,
+      122,
+      16,
+      233
+    ],
+    "retrieval_hit": true,
+    "answer": "Fireball deals 8d6 fire damage (half on a successful Dexterity save), and its damage increases by 1d6 for each spell‑slot level used above 3rd level [page 131]. The damage roll is made once and applied to all creatures in the blast [page 16].",
+    "answer_correct": true
+  },
+  {
+    "question": "How long does a Long Rest take?",
+    "expected_page": 185,
+    "retrieved_pages": [
+      185,
+      16,
+      185,
+      192,
+      186
+    ],
+    "retrieval_hit": true,
+    "answer": "A Long Rest requires **at least 8 hours** of downtime (including at least 6 hours of sleep and up to 2 hours of light activity)【page 185】.",
+    "answer_correct": true
+  },
+  {
+    "question": "What is the best pizza topping?",
+    "expected_page": null,
+    "retrieved_pages": [
+      102,
+      248,
+      101,
+      265,
+      265
+    ],
+    "retrieval_hit": null,
+    "answer": "I couldn't find that in the SRD.",
+    "answer_correct": true
+  },
+  {
+    "question": "Who is Drizzt Do'Urden?",
+    "expected_page": null,
+    "retrieved_pages": [
+      281,
+      281,
+      297,
+      157,
+      281
+    ],
+    "retrieval_hit": null,
+    "answer": "I couldn't find that in the SRD.",
+    "answer_correct": true
+  }
+]
