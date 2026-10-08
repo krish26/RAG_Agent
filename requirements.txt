@@ -5,3 +5,4 @@ groq
 python-dotenv
 langgraph
 langchain-groq
+streamlit
